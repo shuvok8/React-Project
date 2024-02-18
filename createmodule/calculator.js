@@ -1,4 +1,8 @@
 let sumData= (a, b) =>{
     return a+b;
 }
-export default sumData
+// -- Default Export
+// export default sumData
+
+// --Name Export
+export {sumData} 
