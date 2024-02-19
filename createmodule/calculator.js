@@ -1,4 +1,7 @@
 let sumData=(a,b) => {
     return a+b;
 }
-export default sumData
+let minData=(a,b) => {
+    return a-b;
+}
+export {sumData,minData}
