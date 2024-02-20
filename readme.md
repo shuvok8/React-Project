@@ -471,3 +471,59 @@ These concepts are fundamental to working with Node.js and npm ecosystem, and un
    npx is a package executor that allows you to execute Node.js packages directly without installing them globally. It simplifies the process of running CLI tools or one-off scripts.
 
 In summary, Node.js, npm, npx, and package management are fundamental concepts in JavaScript development, allowing you to efficiently manage dependencies and build applications.
+
+## React components
+React components are the building blocks of React applications. They are self-contained, reusable pieces of UI that can be composed together to create complex user interfaces. Components can be of two main types: functional components and class components.
+
+1. **Functional Components**:
+   Functional components are simple JavaScript functions that take props (short for "properties") as an argument and return JSX, which represents the UI of the component. Here's an example of a functional component:
+
+   ```jsx
+   import React from 'react';
+
+   const Greeting = (props) => {
+     return <h1>Hello, {props.name}!</h1>;
+   };
+
+   export default Greeting;
+   ```
+
+   In this example, `Greeting` is a functional component that receives a `name` prop and renders a greeting message using JSX.
+
+2. **Class Components**:
+   Class components are ES6 classes that extend the `React.Component` class. They have more features than functional components, such as lifecycle methods and the ability to maintain state. Here's an example of a class component:
+
+   ```jsx
+   import React, { Component } from 'react';
+
+   class Greeting extends Component {
+     render() {
+       return <h1>Hello, {this.props.name}!</h1>;
+     }
+   }
+
+   export default Greeting;
+   ```
+
+   In this example, `Greeting` is a class component that defines a `render()` method to render the UI. It also receives a `name` prop and uses `this.props` to access it.
+
+Both functional and class components can be used interchangeably in React applications. However, functional components are simpler and more lightweight, while class components offer additional features such as state management and lifecycle methods.
+
+To use these components in a React application, you can import them into other files and include them in the JSX returned by `ReactDOM.render()`:
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Greeting from './Greeting'; // Importing the Greeting component
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Greeting name="Alice" />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
+In this example, we're rendering the `Greeting` component with a `name` prop set to "Alice" to the root element of the HTML document. The component will render a greeting message saying "Hello, Alice!".
+
+Overall, React components are reusable pieces of UI that help organize and modularize React applications, making them easier to build and maintain.
