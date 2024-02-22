@@ -101,6 +101,7 @@ const App = () => {
 export default App;
 ```
 
+
 However, using JSX directly in your code makes it much more readable and maintainable compared to writing nested `React.createElement()` calls. This is one of the key benefits of JSX in React development.
 
 ## Essential concepts in JavaScript
